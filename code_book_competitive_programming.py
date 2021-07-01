@@ -1,9 +1,9 @@
 # --- Code Book: Competitive Programming
-# --- Source   : github.com/keon/algorithms.git
+# --- Source   : github.com/sm2774us/competitive_programming_book.git
 
 #========================================================================================================================
 #       :: Arrays :: 
-#		:: array/product_of_array_except_self.py ::
+#       :: array/product_of_array_except_self.py ::
 #       LC-238 | Product of Array Except Self | https://leetcode.com/problems/product-of-array-except-self/ | Medium
 #========================================================================================================================
 |  1| """
@@ -41,7 +41,7 @@
 
 #====================================================================================================================================================
 #       :: Arrays :: 
-#		:: array/subarray_sum_equals_k.py ::
+#       :: array/subarray_sum_equals_k.py ::
 #       LC-560 | Subarray Sum Equals K | https://leetcode.com/problems/subarray-sum-equals-k/ | Medium
 #====================================================================================================================================================
 |  1| """
@@ -74,7 +74,7 @@
 
 #====================================================================================================================================================
 #       :: Arrays :: 
-#		:: array/subarray_sum_equals_k_facebook_i_variant.py ::
+#       :: array/subarray_sum_equals_k_facebook_i_variant.py ::
 #       Facebook Interview - I (Variant of: LC-560 - Subarray Sum Equals K ) | Facebook - I - Variant of Subarray Sum Equals K | Medium
 #       https://leetcode.com/discuss/interview-question/algorithms/124820/continuous-sequence-against-target-number
 #       [ Only consider positive numbers, so we can use Sliding Window to improve Space Complexity from O(N) to O(1) ]
@@ -123,7 +123,7 @@
 
 #=======================================================================================================================================================
 #       :: Arrays :: 
-#		:: array/subarray_sum_equals_k_non_overlapping_intervals_facebook_ii_variant.py ::
+#       :: array/subarray_sum_equals_k_non_overlapping_intervals_facebook_ii_variant.py ::
 #       Facebook Interview - II (Variant of: LC-560 - Subarray Sum Equals K ) | Facebook - Max Sum of Non-overlapping Subarray with Fixed Sum | Medium
 #       https://leetcode.com/discuss/interview-question/750317/facebook-phone-max-sum-of-non-overlapping-subarray-with-fixed-sum
 #======================================================================================================================================================
@@ -169,7 +169,7 @@
 
 #====================================================================================================================================================
 #       :: Arrays :: 
-#		:: array/maximum_subarray.py ::
+#       :: array/maximum_subarray.py ::
 #       LC-53 | Maximum Subarray | https://leetcode.com/problems/maximum-subarray/ | Easy
 #====================================================================================================================================================
 |  1| """
@@ -211,7 +211,7 @@
 
 #====================================================================================================================================================
 #       :: Arrays :: 
-#		:: array/maximum_subarray_variant.py ::
+#       :: array/maximum_subarray_variant.py ::
 #       Maximum Subarray - Return Subarray (Variant of: LC-53 - Maximum Subarray ) | Maximum Subarray - Return Subarray | Medium
 #====================================================================================================================================================
 |  1| """
