@@ -240,3 +240,265 @@
 | 24|             start = beg
 | 25|             end = i
 | 26|     return A[start:end+1]
+
+#====================================================================================================================================================
+#       :: Arrays :: 
+#       :: array/best_time_to_buy_and_sell_stock.py ::
+#       LC-121 | Best Time to Buy and Sell Stock | https://leetcode.com/problems/best-time-to-buy-and-sell-stock/ | Easy
+#====================================================================================================================================================
+|  1| """
+|  2| You are given an array prices where prices[i] is the price of a given stock on the ith day.
+|  3| 
+|  4| You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.
+|  5| 
+|  6| Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
+|  7|
+|  8| Example 1:
+|  9|
+| 10|   Input: prices = [7,1,5,3,6,4]
+| 11|   Output: 5
+| 12|   Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
+| 13|   Note that buying on day 2 and selling on day 1 is not allowed because you must buy before you sell.
+| 14|
+| 15| Example 2:
+| 16|
+| 17|   Input: prices = [7,6,4,3,1]
+| 18|   Output: 0
+| 19|   Explanation: In this case, no transactions are done and the max profit = 0.
+| 20|
+| 21| """
+| 22|
+| 23| """
+| 24|
+| 25|                                      Sell
+| 26|                                  + stock price to balance
+| 27|                       +---------------------------------------------+
+| 28|                      /                                               \
+| 29|                     /                                                 \
+| 30|                   |/_                                                  \    
+| 31|   ___    _________+                                                     \_________    ___
+| 32|  /  _\| /         \                                                     /         \ |/_  \
+| 33| |      + Not Hold  +                                                   +    Hold   +      | Keep in hold
+| 34|  \___/  \_________/                                                     \_________/  \___/
+| 35|                    \                                                  --+
+| 36| Keep in not holding \                                                  /|
+| 37|                      +-----------------------------------------------+/
+| 38|                                  Buy
+| 39|                                  - stock price from balance
+| 40| 
+| 41|
+| 42| """
+| 43|
+| 44|
+| 45|
+| 46| #TC: O(N) - We traverse the list containing N elements only once.
+| 47| #SC: O(1) - The variables are constant during each iteration of our traversal.
+| 48| import math
+| 49| from typing import List
+| 50| def maxProfit(self, prices: List[int]) -> int:
+| 51|
+| 52|     # It is impossible to have stock to sell on first day, so -infinity is set as initial value
+| 53|     cur_hold, cur_not_hold = --math.inf, 0  # using -math.inf in place of -float('inf')
+| 54|
+| 55|     for stock_price in prices:       
+| 56|         prev_hold, prev_not_hold = cur_hold, cur_not_hold
+| 57|
+| 58|         # either keep in hold, or just buy today with stock price
+| 59|         cur_hold = max(prev_hold, -stock_price)
+| 60|            
+| 61|         # either keep in not holding, or just sell today with stock price
+| 62|         cur_not_hold = max(prev_not_hold, prev_hold + stock_price)            
+| 63|            
+| 64|     # max profit must be in not-hold state
+| 65|     return cur_not_hold if prices else 0
+
+#====================================================================================================================================================
+#       :: Arrays :: 
+#       :: array/best_time_to_buy_and_sell_stock_ii.py ::
+#       LC-122 | Best Time to Buy and Sell Stock II | https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii | Easy
+#====================================================================================================================================================
+|  1| """
+|  2| You are given an array prices where prices[i] is the price of a given stock on the ith day.
+|  3| 
+|  4| Find the maximum profit you can achieve. You may complete as many transactions as you like (i.e., buy one and sell one share of the stock multiple times).
+|  5| 
+|  6| Note: You may not engage in multiple transactions simultaneously (i.e., you must sell the stock before you buy again).
+|  7|
+|  8| Example 1:
+|  9|
+| 10|   Input: prices = [7,1,5,3,6,4]
+| 11|   Output: 7
+| 12|   Explanation: Buy on day 2 (price = 1) and sell on day 3 (price = 5), profit = 5-1 = 4.
+| 13|   Then buy on day 4 (price = 3) and sell on day 5 (price = 6), profit = 6-3 = 3.
+| 14|
+| 15| Example 2:
+| 16|
+| 17|   Input: prices = [1,2,3,4,5]
+| 18|   Output: 4
+| 19|   Explanation: Buy on day 1 (price = 1) and sell on day 5 (price = 5), profit = 5-1 = 4.
+| 20|   Note that you cannot buy on day 1, buy on day 2 and sell them later, as you are engaging multiple transactions at the same time. You must sell before buying again.
+| 21|
+| 22| Example 3:
+| 23|
+| 24|   Input: prices = [7,6,4,3,1]
+| 25|   Output: 0
+| 26|   Explanation: In this case, no transaction is done, i.e., max profit = 0.
+| 27|
+| 28| """
+| 29|
+| 30| """
+| 31|
+| 32|                                      Sell
+| 33|                                  + stock price to balance
+| 34|                       +---------------------------------------------+
+| 35|                      /                                               \
+| 36|                     /                                                 \
+| 37|                   |/_                                                  \    
+| 38|   ___    _________+                                                     \_________    ___
+| 39|  /  _\| /         \                                                     /         \ |/_  \
+| 40| |      + Not Hold  +                                                   +    Hold   +      | Keep in hold
+| 41|  \___/  \_________/                                                     \_________/  \___/
+| 42|                    \                                                  --+
+| 43| Keep in not holding \                                                  /|
+| 44|                      +-----------------------------------------------+/
+| 45|                                  Buy
+| 46|                                  - stock price from balance
+| 47| 
+| 48|
+| 49| """
+| 50|
+| 51| #TC: O(N) - We traverse the list containing N elements only once.
+| 52| #SC: O(1) - The variables are constant during each iteration of our traversal.
+| 53| import math
+| 53| from typing import List
+| 54| def maxProfit(self, prices: List[int]) -> int:
+| 55|
+| 56|     # It is impossible to have stock to sell on first day, so -infinity is set as initial value
+| 57|     cur_hold, cur_not_hold = -math.inf, 0  # using -math.inf in place of -float('inf')
+| 58|
+| 59|     for stock_price in prices:       
+| 60|         prev_hold, prev_not_hold = cur_hold, cur_not_hold
+| 61|
+| 62|         # either keep hold, or buy in stock today at stock price
+| 63|         cur_hold = max( prev_hold, prev_not_hold - stock_price )
+| 64|            
+| 65|         # either keep not-hold, or sell out stock today at stock price
+| 66|         cur_not_hold = max(prev_not_hold, prev_hold + stock_price )            
+| 67|            
+| 68|     # max profit must be in not-hold state
+| 69|     return cur_not_hold if prices else 0
+
+#====================================================================================================================================================
+#       :: Arrays :: 
+#       :: array/best_time_to_buy_and_sell_stock_iii.py ::
+#       LC-123 | Best Time to Buy and Sell Stock III | https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii | Easy
+#====================================================================================================================================================
+|  1| """
+|  2| You are given an array prices where prices[i] is the price of a given stock on the ith day.
+|  3| 
+|  4| Find the maximum profit you can achieve. You may complete at most two transactions.
+|  5| 
+|  6| Note: You may not engage in multiple transactions simultaneously (i.e., you must sell the stock before you buy again).
+|  7|
+|  8| Example 1:
+|  9|
+| 10|   Input: prices = [3,3,5,0,0,3,1,4]
+| 11|   Output: 6
+| 12|   Explanation: Buy on day 4 (price = 0) and sell on day 6 (price = 3), profit = 3-0 = 3.
+| 13|   Then buy on day 7 (price = 1) and sell on day 8 (price = 4), profit = 4-1 = 3.
+| 14|
+| 15| Example 2:
+| 16|
+| 17|   Input: prices = [1,2,3,4,5]
+| 18|   Output: 4
+| 19|   Explanation: Buy on day 1 (price = 1) and sell on day 5 (price = 5), profit = 5-1 = 4.
+| 20|   Note that you cannot buy on day 1, buy on day 2 and sell them later, as you are engaging multiple transactions at the same time. You must sell before buying again.
+| 21|
+| 22| Example 3:
+| 23|
+| 24|   Input: prices = [7,6,4,3,1]
+| 25|   Output: 0
+| 26|   Explanation: In this case, no transaction is done, i.e., max profit = 0.
+| 27|
+| 28| """
+| 29|
+| 30| """
+| 31|
+| 32|                                      Sell
+| 33|                                  + stock price to balance
+| 34|                       +---------------------------------------------+
+| 35|                      /                                               \
+| 36|                     /                                                 \
+| 37|                   |/_                                                  \    
+| 38|   ___    _________+                                                     \_________    ___
+| 39|  /  _\| /         \                                                     /         \ |/_  \
+| 40| |      + Not Hold  +                                                   +    Hold   +      | Keep in hold
+| 41|  \___/  \_________/                                                     \_________/  \___/
+| 42|                    \                                                  --+
+| 43| Keep in not holding \                                                  /|
+| 44|                      +-----------------------------------------------+/
+| 45|                                  Buy
+| 46|                                  - stock price from balance
+| 47| 
+| 48|                                  Add one more transaction on this path
+| 49| """
+| 50|
+| 51| #TC: O(N) - We traverse the list containing N elements only once.
+| 52| #SC: O(1) - The variables are constant during each iteration of our traversal.
+| 53| import math
+| 53| from typing import List
+| 54| def maxProfit(self, prices: List[int]) -> int:
+| 55|
+| 56|     '''
+| 56|     dp_2_hold: max profit with 2 transactions, and in hold state
+| 57|     dp_2_not_hold: max profit with 2 transactions, and not in hold state
+| 58|
+| 59|     dp_1_hold: max profit with 1 transaction, and in hold state
+| 60|     dp_1_not_hold: max profit with 1 transaction, and not in hold state
+| 61|
+| 62|     Note: it is impossible to have stock in hand and sell on first day, therefore -infinity is set as initial profit value for hold state
+| 63|     '''
+| 64|
+| 65|     dp_2_hold, dp_2_not_hold = -float('inf'), 0
+| 66|     dp_1_hold, dp_1_not_hold = -float('inf'), 0
+| 67|
+| 68|     for stock_price in prices:
+| 69|            
+| 70|         # either keep being in not-hold state, or sell with stock price today
+| 71|         dp_2_not_hold = max( dp_2_not_hold, dp_2_hold + stock_price )
+| 72|		
+| 73|         # either keep being in hold state, or just buy with stock price today ( add one more transaction )
+| 74|         dp_2_hold = max( dp_2_hold, dp_1_not_hold - stock_price )
+| 75|       
+| 76|         # either keep being in not-hold state, or sell with stock price today
+| 77|         dp_1_not_hold = max( dp_1_not_hold, dp_1_hold + stock_price )
+| 78|		
+| 79|         # either keep being in hold state, or just buy with stock price today ( add one more transaction )
+| 80|         dp_1_hold = max( dp_1_hold, 0 - stock_price )
+| 81|   
+| 82|     return dp_2_not_hold
+        
+#====================================================================================================================================================
+#       :: Arrays :: 
+#       :: array/best_time_to_buy_and_sell_stock_iv.py ::
+#       LC-188 | Best Time to Buy and Sell Stock IV | https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv | Easy
+#====================================================================================================================================================
+
+#===========================================================================================================================================================
+#       :: Arrays :: 
+#       :: array/best_time_to_buy_and_sell_stock_with_cooldown.py ::
+#       LC-309 | Best Time to Buy and Sell Stock With Cooldown | https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown | Easy
+#===========================================================================================================================================================
+
+#===========================================================================================================================================================
+#       :: Arrays :: 
+#       :: array/best_time_to_buy_and_sell_stock_with_transaction.py ::
+#       LC-714 | Best Time to Buy and Sell Stock With Transaction | https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction | Easy
+#===========================================================================================================================================================
+
+
+#====================================================================================================================================================
+#       :: Arrays :: 
+#       :: array/find_the_duplicate_number.py ::
+#       LC-287 | Find the Duplicate Number | https://leetcode.com/problems/find-the-duplicate-number/ | Medium
+#====================================================================================================================================================
