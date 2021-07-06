@@ -1156,6 +1156,7 @@
 #====================================================================================================================================================
 #       :: Arrays ::
 #       :: Merge Sort ::
+#       :: Prefix Sum on 1D Array using Sorted Container ::
 #       :: array/max_sum_of_rectangle_no_larger_than_k.py ::
 #       LC-363 | Max Sum of Rectangle No Larger Than K | https://leetcode.com/problems/max-sum-of-rectangle-no-larger-than-k/ | Hard
 #====================================================================================================================================================
@@ -1284,7 +1285,7 @@
 |123|
 |124|     return ans
 |125|
-|126| # Approach-3: Prefix Sum on 1D Array using Sorted Container
+|126| # Approach-3: Prefix Sum on 1D Array using Sorted Container ( using normal list and bisect.insort function )
 |127| # We can use slightly different function countRangeSum, where instead of SortedList we use usual list and insort function.
 |128| # Complexity is O(n^2), however because n is not very big, it works even faster than previous method, like 2-3 times!
 |129| # Complexity:
