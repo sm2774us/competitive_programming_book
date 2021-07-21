@@ -1649,7 +1649,7 @@
 #====================================================================================================================================================
 #       :: Arrays ::
 #       :: MONOTONOUS STACK ::
-#       :: arrays/largest_rectangle_in_histogram.py ::
+#       :: monotonous_stacks/largest_rectangle_in_histogram.py ::
 #       LC-84 | Largest Rectangle in Histogram | https://leetcode.com/problems/largest-rectangle-in-histogram/ | Hard
 #====================================================================================================================================================
 |  1| """
@@ -1746,7 +1746,7 @@
 #====================================================================================================================================================
 #       :: Arrays ::
 #       :: MONOTONOUS STACK ::
-#       :: arrays/maximal_rectangle.py ::
+#       :: monotonous_stacks/maximal_rectangle.py ::
 #       LC-85 | Maximal Rectangle | https://leetcode.com/problems/maximal-rectangle/ | Hard
 #====================================================================================================================================================
 |  1| """
@@ -1861,7 +1861,7 @@
 #====================================================================================================================================================
 #       :: Arrays ::
 #       :: MONOTONOUS STACK ::
-#       :: arrays/final_prices_with_a_special_discount_in_a_shop.py ::
+#       :: monotonous_stacks/final_prices_with_a_special_discount_in_a_shop.py ::
 #       LC_1475 | Final Prices With a Special Discount in a Shop | https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop/ | Easy
 #====================================================================================================================================================
 |  1| """
@@ -1919,7 +1919,7 @@
 #====================================================================================================================================================
 #       :: Arrays ::
 #       :: MONOTONOUS STACK ::
-#       :: arrays/sum_of_subarray_minimums.py ::
+#       :: monotonous_stacks/sum_of_subarray_minimums.py ::
 #       LC_907 | Sum of Subarray Minimums | https://leetcode.com/problems/sum-of-subarray-minimums/ | Medium
 #====================================================================================================================================================
 |  1| """
@@ -2103,7 +2103,7 @@
 #====================================================================================================================================================
 #       :: Arrays ::
 #       :: MONOTONOUS STACK ::
-#       :: arrays/online_stock_span.py ::
+#       :: monotonous_stacks/online_stock_span.py ::
 #       LC_901 | Online Stock Span | https://leetcode.com/problems/online-stock-span/ | Medium
 #====================================================================================================================================================
 |  1| """
@@ -2182,7 +2182,7 @@
 #====================================================================================================================================================
 #       :: Arrays ::
 #       :: MONOTONOUS STACK ::
-#       :: arrays/find_the_most_competitive_subsequence.py ::
+#       :: monotonous_stacks/find_the_most_competitive_subsequence.py ::
 #       LC_1673 | Find the Most Competitive Subsequence | https://leetcode.com/problems/find-the-most-competitive-subsequence/ | Medium
 #====================================================================================================================================================
 |  1| """
@@ -2248,7 +2248,7 @@
 #====================================================================================================================================================
 #       :: Arrays ::
 #       :: MONOTONOUS STACK ::
-#       :: arrays/sliding_window_maximum.py ::
+#       :: monotonous_stacks/sliding_window_maximum.py ::
 #       LC_239 | Sliding Window Maximum | https://leetcode.com/problems/sliding-window-maximum/ | Hard
 #====================================================================================================================================================
 |  1| """
@@ -2400,7 +2400,7 @@
 #====================================================================================================================================================
 #       :: Arrays ::
 #       :: MONOTONOUS STACK ::
-#       :: arrays/shortest_subarray_with_sum_at_least_k.py ::
+#       :: monotonous_stacks/shortest_subarray_with_sum_at_least_k.py ::
 #       LC_862 | Shortest Subarray with Sum at Least K | https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/ | Hard
 #====================================================================================================================================================
 |  1| """
